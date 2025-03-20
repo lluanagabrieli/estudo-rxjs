@@ -1,27 +1,20 @@
-# Buscante
+# Estudo da biblioteca do Angular RxJs
+RxJs é uma biblioteca utilizada para a construção de programas assíncronos ou baseados em eventos, utilizando Observables - são como “canais de dados" que emitem valores ao longo do tempo e podem ser manipulados com operadores, além de deixar o código mais legível e limpo.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+## Vantagens
 
-## Development server
+1. **Melhor controle de assincronia**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Trabalha bem com requisições HTTP, eventos de usuário e WebSockets - comunicação entre navegador e servidor.
 
-## Code scaffolding
+1. **Evita o "callback hell”**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Os operadores podem ser encadeados para formar uma sequência de transformações, filtragens e manipulações. Isso resulta em um código mais linear, evitando o famoso **callback hell** que pode ocorrer quando a lógica está aninhada dentro de blocos `subscribe`
 
-## Build
+1. **Alta performance**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Reduz chamadas desnecessárias à API
 
-## Running unit tests
+4. **Manutenibilidade:** 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Separar a lógica do `subscribe` torna o código mais fácil de manter. Se precisar fazer alterações ou adicionar novos comportamentos, pode fazê-lo diretamente nos operadores, sem interferir na lógica de subscrição ou em outras partes do código.
